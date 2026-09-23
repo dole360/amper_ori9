@@ -450,18 +450,22 @@ body.lp-template9 .swal2-container{
 body.lp-template9 .swal2-popup{position:relative!important;z-index:60001!important;max-width:calc(100vw - 20px)!important;max-height:calc(100vh - 20px)!important}
 body.lp-template9 :is(
   .cr-overlay,.rp-overlay,.rw-overlay,
-  .md-manager-overlay,.md-manager-action-overlay,.md-manager-image-dialog,
-  .in-manager-overlay,.in-manager-action-overlay,.in-manager-image-dialog,
-  .bp-manager-overlay,.bp-manager-action-overlay,.bp-manager-image-dialog,
+  .md-manager-overlay,.md-manager-action-overlay,
+  .in-manager-overlay,.in-manager-action-overlay,
+  .bp-manager-overlay,.bp-manager-action-overlay,
   .pl-overlay,.team-manager-overlay,.team-manager-action-overlay,.team-manager-image-overlay,
   .newsletter-action-overlay,.newsletter-image-overlay,.facebook-action-overlay,
   .learning-modal,.admin-login-modal,.modalBackdrop
 ){
-  position:fixed!important;inset:0!important;z-index:61000!important;width:100vw!important;height:100vh!important;max-width:none!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important
+  position:fixed!important;inset:0!important;z-index:61000!important;width:100vw!important;height:100vh!important;max-width:none!important;margin:0!important;align-items:center!important;justify-content:center!important
 }
+/* Do not force hidden/static modals open. Their original CSS/JS controls display. */
+body.lp-template9 :is(.admin-login-modal,.learning-modal,.modalBackdrop)[hidden]{display:none!important}
 body.lp-template9 :is(
   .cr-dialog,.rp-dialog,.rw-dialog,.rw-image-dialog,
-  .md-manager-dialog,.in-manager-dialog,.bp-manager-dialog,.pl-dialog,
+  .md-manager-dialog,.md-manager-image-dialog,
+  .in-manager-dialog,.in-manager-image-dialog,
+  .bp-manager-dialog,.bp-manager-image-dialog,.pl-dialog,
   .team-manager-dialog,.team-manager-image-dialog,
   .newsletter-action-dialog,.newsletter-image-dialog,
   .boss-popup-dialog,.learning-modal-box,.edit-profile-modal-box,.modal-card
